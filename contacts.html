@@ -52,23 +52,32 @@
           <p class="muted"><strong>Режим работы:</strong> Пн–Пт, 09:00–18:00</p>
         </div>
 
-        <div class="card" id="form">
-          <h3>Форма заявки</h3>
-          <form class="contact-form" id="contactForm">
-            <label>
-              <span>Имя</span>
-              <input type="text" name="name" placeholder="Ваше имя" required>
-            </label>
-            <label>
-              <span>Телефон или email</span>
-              <input type="text" name="contact" placeholder="+7... или email" required>
-            </label>
-            <label>
-              <span>Сообщение</span>
-              <textarea name="message" rows="5" placeholder="Что нужно упаковать, размеры, вес, объёмы" required></textarea>
-            </label>
-            <button class="btn btn-primary btn-block" type="submit">Отправить заявку</button>
-          </form>
+        <form action="https://formspree.io/f/xojkodqb" method="POST" class="contact-form">
+
+  <!-- защита от спама -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <!-- редирект после отправки -->
+  <input type="hidden" name="_redirect" value="https://linko-packaging.ru/thanks.html">
+
+  <label>
+    <span>Имя</span>
+    <input type="text" name="name" placeholder="Ваше имя" required>
+  </label>
+
+  <label>
+    <span>Телефон или email</span>
+    <input type="text" name="contact" placeholder="+7... или email" required>
+  </label>
+
+  <label>
+    <span>Сообщение</span>
+    <textarea name="message" rows="5" placeholder="Что нужно упаковать, размеры, вес, объем" required></textarea>
+  </label>
+
+  <button class="btn btn-primary btn-block" type="submit">Отправить заявку</button>
+
+</form>
           <p class="form-note muted"></p>
         </div>
       </div>
