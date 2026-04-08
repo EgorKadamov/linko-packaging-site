@@ -1,20 +1,24 @@
-(function () {
-  const form = document.getElementById("contactForm");
-  if (!form) return;
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
 
-    const name = form.querySelector('[name="name"]').value.trim();
-    const contact = form.querySelector('[name="contact"]').value.trim();
-    const message = form.querySelector('[name="message"]').value.trim();
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        "Accept": "application/json"
+      }
+    });
 
-    if (!name || !contact || !message) {
-      alert("Заполни все поля формы.");
-      return;
+    if (response.ok) {
+      window.location.href = "/thanks.html";
+    } else {
+      alert("Ошибка отправки. Попробуйте еще раз.");
     }
-
-    alert("Заявка отправлена.");
-    form.reset();
-  });
-})();
+  } catch (error) {
+    alert("Ошибка отправки. Проверьте интернет.");
+  }
+});
