@@ -531,9 +531,8 @@ h3{font-size:18px}
 }
 
 .max-float {
-  background: #222; /* можно поменять */
+  background: #0066FF;
   color: white;
-  font-size: 22px;
 }
 
 .tg-float:hover,
