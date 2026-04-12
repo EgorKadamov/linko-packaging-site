@@ -541,3 +541,54 @@ h3{font-size:18px}
 .max-float:hover {
   transform: scale(1.1);
 }
+.float-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+/* общая кнопка */
+.float-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.2s;
+}
+
+/* Telegram */
+.tg-btn {
+  background: #229ED9;
+}
+
+.tg-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+/* MAX */
+.max-btn {
+  background: #ffffff;
+  color: #000;
+}
+
+.max-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* hover */
+.float-btn:hover {
+  transform: scale(1.05);
+}
