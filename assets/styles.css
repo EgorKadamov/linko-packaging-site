@@ -530,9 +530,9 @@ h3{font-size:18px}
   color: white;
 }
 
-.max-float {
-  background: #0066FF;
-  color: white;
+.max-float img {
+  width: 28px;
+  height: 28px;
 }
 
 .tg-float:hover,
