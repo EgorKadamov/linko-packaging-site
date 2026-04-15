@@ -683,3 +683,35 @@ h3{font-size:18px}
   gap: 12px;
   flex-wrap: wrap;
 }
+.contacts-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contacts-info-card,
+.contact-form {
+  padding: 24px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+}
+
+.location-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .contacts-page-grid {
+    grid-template-columns: 1fr;
+  }
+}
