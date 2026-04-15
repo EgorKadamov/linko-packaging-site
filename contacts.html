@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./assets/styles.css"/>
   <link rel="icon" href="./assets/favicon.png" type="image/png">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -20,133 +21,119 @@
       </a>
 
       <nav class="nav">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
-          <span class="sr-only">Открыть меню</span>
-          <span class="burger"></span>
-        </button>
-
-        <ul id="navMenu" class="nav-menu">
-          <li><a class="nav-link" href="./index.html">Главная</a></li>
-          <li><a class="nav-link" href="./about.html">О компании</a></li>
-          <li><a class="nav-link" href="./products.html">Продукция</a></li>
-          <li><a class="nav-link" href="./articles.html">Статьи</a></li>
-          <li><a class="nav-link" href="./contacts.html" aria-current="page">Контакты</a></li>
-          <li class="nav-cta"><a class="btn btn-primary" href="#contactForm">Запросить расчёт</a></li>
+        <ul class="nav-menu">
+          <li><a href="./index.html">Главная</a></li>
+          <li><a href="./about.html">О компании</a></li>
+          <li><a href="./products.html">Продукция</a></li>
+          <li><a href="./articles.html">Статьи</a></li>
+          <li><a href="./contacts.html" class="active">Контакты</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
+
     <section class="section">
       <div class="container">
-        <p class="eyebrow">Контакты</p>
-        <h1>Свяжитесь с нами</h1>
-        <p class="lead">
-          Напишите, что нужно упаковать. Подготовим расчёт и предложим подходящий вариант.
-        </p>
+        <h1>Контакты</h1>
+        <p class="lead">Свяжитесь с нами и получите расчёт упаковки под ваш запрос</p>
       </div>
     </section>
 
-    <section class="section decorated-section">
+    <section class="section">
       <div class="container contacts-page-grid">
 
+        <!-- ЛЕВАЯ КОЛОНКА -->
         <div class="card contacts-info-card">
+
           <h3>Контактная информация</h3>
 
-          <div class="contacts-list">
-            <p class="muted">
-              <strong>Адрес:</strong><br>
-              454036, Челябинск, Радонежская улица, 14/2
-            </p>
+          <p>
+            <strong>Адрес:</strong><br>
+            454036, Челябинск, Радонежская улица, 14/2
+          </p>
 
-            <p class="muted">
-              <strong>Телефон:</strong><br>
-              <a href="tel:+79936062936">+7 (993) 606-29-36</a>
-            </p>
+          <p>
+            <strong>Телефон:</strong><br>
+            <a href="tel:+79936062936">+7 (993) 606-29-36</a>
+          </p>
 
-            <p class="muted">
-              <strong>Email:</strong><br>
-              <a href="mailto:linkko374@gmail.com">linkko374@gmail.com</a>
-            </p>
+          <p>
+            <strong>Email:</strong><br>
+            <a href="mailto:linkko374@gmail.com">linkko374@gmail.com</a>
+          </p>
 
-            <p class="muted">
-              <strong>Режим работы:</strong><br>
-              Пн–Пт, 09:00–18:00
-            </p>
-          </div>
+          <p>
+            <strong>Режим работы:</strong><br>
+            Пн–Пт, 09:00–18:00
+          </p>
 
           <div class="location-actions">
+            <a class="btn btn-primary" href="https://yandex.ru/maps/-/CPvJ7RKx" target="_blank">
+              Яндекс Карты
+            </a>
 
-  <a
-    class="btn btn-primary"
-    href="https://yandex.ru/maps/-/CPvJ7RKx"
-    target="_blank"
-    rel="noopener noreferrer">
-    Яндекс Карты
-  </a>
+            <a class="btn btn-secondary" href="https://go.2gis.com/T01jH" target="_blank">
+              2ГИС
+            </a>
+          </div>
 
-  <a
-    class="btn btn-secondary"
-    href="https://go.2gis.com/T01jH"
-    target="_blank"
-    rel="noopener noreferrer">
-    2ГИС
-  </a>
-
-</div>
         </div>
 
+        <!-- ПРАВАЯ КОЛОНКА -->
         <form action="https://formspree.io/f/xojkodqb" method="POST" class="contact-form card" id="contactForm">
+
           <input type="text" name="_gotcha" style="display:none">
 
           <h3>Запросить расчёт</h3>
 
           <label>
-            <span>Имя</span>
+            Имя
             <input type="text" name="name" placeholder="Ваше имя" required>
           </label>
 
           <label>
-            <span>Телефон или email</span>
+            Телефон или email
             <input type="text" name="contact" placeholder="+7... или email" required>
           </label>
 
           <label>
-            <span>Сообщение</span>
-            <textarea name="message" rows="5" placeholder="Что нужно упаковать, размеры, вес, объём" required></textarea>
+            Сообщение
+            <textarea name="message" rows="5" placeholder="Размеры, объём, задача" required></textarea>
           </label>
 
-          <button class="btn btn-primary btn-block" type="submit">Отправить заявку</button>
-          <p class="form-note muted">Ответим в рабочее время как можно быстрее.</p>
+          <button class="btn btn-primary btn-block" type="submit">
+            Отправить заявку
+          </button>
+
         </form>
 
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-bottom">
-      <p class="muted">© <span id="year"></span> ООО «ЛИНКО»</p>
-      <p class="muted">Поставка упаковочных материалов для бизнеса</p>
+    <div class="container">
+      <p>© ООО «ЛИНКО»</p>
     </div>
   </footer>
 
+  <!-- КНОПКИ -->
   <div class="float-buttons">
-    <a href="https://max.ru/u/f9LHodD0cOLwb6TjY2ouaCPra7yihTef6dEYNiPP4dRpP1u498oZQNjDWqg" class="float-btn max-btn" target="_blank" rel="noopener noreferrer">
+
+    <a href="https://max.ru/u/f9LHodD0cOLwb6TjY2ouaCPra7yihTef6dEYNiPP4dRpP1u498oZQNjDWqg" class="float-btn max-btn" target="_blank">
       <img src="./assets/max.svg" alt="MAX">
-      <span>MAX</span>
     </a>
 
-    <a href="https://t.me/ltldex" class="float-btn tg-btn" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
+    <a href="https://t.me/ltldex" class="float-btn tg-btn" target="_blank">
+      <svg viewBox="0 0 24 24">
         <path d="M9.04 15.53l-.38 4.03c.54 0 .77-.23 1.05-.5l2.52-2.4 5.22 3.82c.96.53 1.64.25 1.9-.89l3.44-16.14c.31-1.44-.52-2-1.45-1.65L1.7 9.33c-1.4.55-1.38 1.34-.24 1.7l4.78 1.49L17.5 5.98c.54-.34 1.03-.15.63.19"/>
       </svg>
-      <span>Telegram</span>
     </a>
+
   </div>
 
-  <script src="./assets/app.js"></script>
-  <script src="./assets/contacts.js"></script>
 </body>
 </html>
