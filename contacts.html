@@ -11,27 +11,34 @@
 
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="./index.html">
-        <img class="brand-logo" src="./assets/logo.png" alt="ЛИНКО" />
-        <span class="brand-text">
-          <strong>ЛИНКО</strong>
-          <small>упаковочные материалы для B2B</small>
-        </span>
-      </a>
+  <div class="container header-inner">
+    <a class="brand" href="./index.html">
+      <img class="brand-logo" src="./assets/logo.png" alt="ЛИНКО" />
+      <span class="brand-text">
+        <strong>ЛИНКО</strong>
+        <small>упаковочные материалы для B2B</small>
+      </span>
+    </a>
 
-      <nav class="nav">
-        <ul class="nav-menu">
-          <li><a href="./index.html">Главная</a></li>
-          <li><a href="./about.html">О компании</a></li>
-          <li><a href="./products.html">Продукция</a></li>
-          <li><a href="./articles.html">Статьи</a></li>
-          <li><a href="./contacts.html" class="active">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <nav class="nav">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+        <span class="sr-only">Открыть меню</span>
+        <span class="burger"></span>
+      </button>
 
+      <ul id="navMenu" class="nav-menu">
+        <li><a class="nav-link" href="./index.html">Главная</a></li>
+        <li><a class="nav-link" href="./about.html">О компании</a></li>
+        <li><a class="nav-link" href="./products.html">Продукция</a></li>
+        <li><a class="nav-link" href="./articles.html">Статьи</a></li>
+        <li><a class="nav-link" href="./contacts.html" aria-current="page">Контакты</a></li>
+        <li class="nav-cta">
+          <a class="btn btn-primary" href="#contactForm">Запросить&nbsp;расчёт</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
   <main>
 
     <section class="section">
