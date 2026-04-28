@@ -1,25 +1,38 @@
-<main class="error-page">
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>404 — страница не найдена | ЛИНКО</title>
+  <meta name="description" content="Страница не найдена. Вернитесь на главную страницу ЛИНКО или запросите расчёт упаковки."/>
+  <link rel="stylesheet" href="./assets/styles.css"/>
+  <link rel="icon" href="./assets/favicon.png" type="image/png">
+</head>
 
-  <div class="error-content">
-    <div class="error-text">
+<body>
+  <main class="not-found-page">
+    <div class="not-found-card">
 
-      <h1>404</h1>
-      <h2>Страница не найдена</h2>
+      <div class="not-found-text">
+        <p class="eyebrow">Ошибка 404</p>
 
-      <p class="muted">
-        Похоже, эта страница потерялась. Давайте вернёмся к упаковке.
-      </p>
+        <h1>Страница потерялась</h1>
 
-      <div class="error-buttons">
-        <a href="/" class="btn btn-primary">На главную</a>
-        <a href="/contacts.html" class="btn">Запросить расчёт</a>
+        <p class="lead">
+          Похоже, эта ссылка ведёт не туда. Вернитесь на главную или отправьте заявку на расчёт упаковки.
+        </p>
+
+        <div class="not-found-actions">
+          <a href="./index.html" class="btn btn-primary">На главную</a>
+          <a href="./contacts.html" class="btn btn-secondary">Запросить расчёт</a>
+        </div>
+      </div>
+
+      <div class="not-found-image">
+        <img src="./assets/404-box.png" alt="Страница не найдена">
       </div>
 
     </div>
-
-    <div class="error-image">
-      <img src="./assets/404-box.png" alt="Ошибка 404">
-    </div>
-  </div>
-
-</main>
+  </main>
+</body>
+</html>
