@@ -156,7 +156,7 @@ form.addEventListener('submit', async (e) => {
   };
 
   try {
-    const res = await fetch('https://functions.yandexcloud.net/d4e0t50koc88v8mhe49e', {
+    const res = await fetch('https://functions.yandexcloud.net/ТВОЙ_URL', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -165,13 +165,8 @@ form.addEventListener('submit', async (e) => {
     });
 
     if (res.ok) {
-      // вариант 1 — очистить форму
-      form.reset();
-
-      // вариант 2 — редирект
       window.location.href = '/thanks.html';
     } else {
-      // тихая ошибка (без алерта)
       console.log('Ошибка отправки');
     }
 
