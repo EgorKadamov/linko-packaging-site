@@ -141,19 +141,19 @@
   </div>
 <script>
 console.log('JS загрузился');
-
+  
 const form = document.querySelector('form');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const formData = new FormData(form);
-
   const data = {
-    name: formData.get('name'),
-    phone: formData.get('phone'),
-    message: formData.get('message')
+    name: form.querySelector('[name="name"]')?.value || '',
+    phone: form.querySelector('[name="phone"]')?.value || '',
+    message: form.querySelector('[name="message"]')?.value || ''
   };
+
+  console.log('Отправляем данные:', data);
 
   try {
     const res = await fetch('https://functions.yandexcloud.net/d4e0t50koc88v8mhe49e', {
@@ -164,14 +164,16 @@ form.addEventListener('submit', async (e) => {
       body: JSON.stringify(data)
     });
 
+    console.log('Статус ответа:', res.status);
+
     if (res.ok) {
       window.location.href = '/thanks.html';
     } else {
-      console.log('Ошибка отправки');
+      console.log('Ошибка отправки:', await res.text());
     }
 
   } catch (err) {
-    console.log('Ошибка сети', err);
+    console.log('Ошибка сети:', err);
   }
 });
 </script>
