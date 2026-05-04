@@ -167,11 +167,13 @@ if (!form) {
         body: JSON.stringify(formData)
       });
 
-      if (response.ok) {
-        window.location.href = '/thanks.html';
-      } else {
-        alert('Ошибка отправки');
-      }
+      const resultText = await response.text();
+
+if (response.ok) {
+  window.location.href = '/thanks.html';
+} else {
+  alert('Ошибка отправки: ' + response.status + ' — ' + resultText);
+}
 
     } catch (err) {
       alert('Ошибка JS: ' + err.message);
