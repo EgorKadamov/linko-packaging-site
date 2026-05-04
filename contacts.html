@@ -139,32 +139,45 @@
     </a>
 
   </div>
-  <script>
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
+<script>
+console.log('JS загрузился');
 
-  const formData = {
-    name: this.name.value,
-    phone: this.phone.value,
-    message: this.message.value
-  };
+const form = document.getElementById('contactForm');
 
-  const response = await fetch('https://functions.yandexcloud.net/d4e0t50koc88v8mhe49e', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(formData)
+if (!form) {
+  alert('Форма не найдена');
+} else {
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    alert('Форма отправляется');
+
+    const formData = {
+      name: this.name.value,
+      phone: this.phone.value,
+      message: this.message.value
+    };
+
+    try {
+      const response = await fetch('https://functions.yandexcloud.net/d4e0t50koc88v8mhe49e', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        window.location.href = '/thanks.html';
+      } else {
+        alert('Ошибка отправки');
+      }
+
+    } catch (err) {
+      alert('Ошибка JS: ' + err.message);
+    }
   });
-
-  if (response.ok) {
-    alert('Заявка отправлена');
-    this.reset();
-  } else {
-    alert('Ошибка отправки');
-  }
-});
+}
 </script>
-
 </body>
 </html>
