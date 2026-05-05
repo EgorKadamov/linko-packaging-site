@@ -1,3 +1,5 @@
+console.log("contacts.js loaded");
+
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
